@@ -6,14 +6,12 @@ LDFLAGS:=-ldflags "-X github.com/qiangxue/golang-restful-starter-kit/app.Version
 default: run
 
 test:
-	go test -p=1 -cover -covermode=count ${PACKAGES}
-
-cover:
 	echo "mode: count" > coverage-all.out
 	$(foreach pkg,$(PACKAGES), \
-		echo ${pkg}; \
 		go test -p=1 -cover -covermode=count -coverprofile=coverage.out ${pkg}; \
 		tail -n +2 coverage.out >> coverage-all.out;)
+
+cover: test
 	go tool cover -html=coverage-all.out
 
 run:
