@@ -52,7 +52,7 @@ cd $GOPATH/qiangxue/golang-restful-starter-kit
 glide up -u -s
 ```
 
-Next, create a PostgreSQL database named `go_restful` and execute the SQL statements given in the file `data/db.sql`.
+Next, create a PostgreSQL database named `go_restful` and execute the SQL statements given in the file `testdata/db.sql`.
 The starter kit uses the following default database connection information:
 * server address: `127.0.0.1` (local machine)
 * server port: `5432`
