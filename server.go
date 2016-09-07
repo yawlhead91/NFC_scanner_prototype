@@ -69,7 +69,10 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
 	rg := router.Group("/v1")
 
 	rg.Post("/auth", apis.Auth(app.Config.JWTSigningKey))
-	rg.Use(auth.JWT(app.Config.JWTVerificationKey))
+	rg.Use(auth.JWT(app.Config.JWTVerificationKey, auth.JWTOptions{
+		SigningMethod: app.Config.JWTSigningMethod,
+		TokenHandler:  apis.JWTHandler,
+	}))
 
 	artistDAO := daos.NewArtistDAO()
 	apis.ServeArtistResource(rg, services.NewArtistService(artistDAO))

@@ -6,6 +6,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/auth"
+	"github.com/qiangxue/golang-restful-starter-kit/app"
 	"github.com/qiangxue/golang-restful-starter-kit/errors"
 	"github.com/qiangxue/golang-restful-starter-kit/models"
 )
@@ -46,5 +47,11 @@ func authenticate(c Credential) models.Identity {
 	if c.Username == "demo" && c.Password == "pass" {
 		return &models.User{ID: "100", Name: "demo"}
 	}
+	return nil
+}
+
+func JWTHandler(c *routing.Context, j *jwt.Token) error {
+	userID := j.Claims.(jwt.MapClaims)["id"].(string)
+	app.GetRequestScope(c).SetUserID(userID)
 	return nil
 }
