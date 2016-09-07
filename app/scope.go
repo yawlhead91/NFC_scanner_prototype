@@ -15,6 +15,8 @@ type RequestScope interface {
 	UserID() string
 	// SetUserID sets the ID of the currently authenticated user
 	SetUserID(id string)
+	// RequestID returns the ID of the current request
+	RequestID() string
 	// Tx returns the currently active database transaction that can be used for DB query purpose
 	Tx() *dbx.Tx
 	// SetTx sets the database transaction
@@ -28,12 +30,12 @@ type RequestScope interface {
 }
 
 type requestScope struct {
-	Logger                  // the logger tagged with the current request information
-	now           time.Time // the time when the request is being processed
-	correlationID string    // an ID correlating one or multiple HTTP requests as a single user transaction
-	userID        string    // an ID identifying the current user
-	rollback      bool      // whether to roll back the current transaction
-	tx            *dbx.Tx   // the currently active transaction
+	Logger              // the logger tagged with the current request information
+	now       time.Time // the time when the request is being processed
+	requestID string    // an ID identifying one or multiple correlated HTTP requests
+	userID    string    // an ID identifying the current user
+	rollback  bool      // whether to roll back the current transaction
+	tx        *dbx.Tx   // the currently active transaction
 }
 
 func (rs *requestScope) UserID() string {
@@ -45,8 +47,8 @@ func (rs *requestScope) SetUserID(id string) {
 	rs.userID = id
 }
 
-func (rs *requestScope) CorrelationID() string {
-	return rs.correlationID
+func (rs *requestScope) RequestID() string {
+	return rs.requestID
 }
 
 func (rs *requestScope) Tx() *dbx.Tx {
@@ -72,13 +74,13 @@ func (rs *requestScope) Now() time.Time {
 // newRequestScope creates a new RequestScope with the current request information.
 func newRequestScope(now time.Time, logger *logrus.Logger, request *http.Request) RequestScope {
 	l := NewLogger(logger, logrus.Fields{})
-	correlationID := request.Header.Get("X-Correlation-Id")
-	if correlationID != "" {
-		l.SetField("CorrelationID", correlationID)
+	requestID := request.Header.Get("X-Request-Id")
+	if requestID != "" {
+		l.SetField("RequestID", requestID)
 	}
 	return &requestScope{
-		Logger:        l,
-		now:           now,
-		correlationID: correlationID,
+		Logger:    l,
+		now:       now,
+		requestID: requestID,
 	}
 }

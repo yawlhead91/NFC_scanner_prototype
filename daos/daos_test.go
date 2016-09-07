@@ -36,7 +36,7 @@ func (rs *requestScope) UserID() string {
 func (rs *requestScope) SetUserID(id string) {
 }
 
-func (rs *requestScope) CorrelationID() string {
+func (rs *requestScope) RequestID() string {
 	return "test"
 }
 
