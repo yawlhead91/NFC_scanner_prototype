@@ -23,8 +23,10 @@ _testmain.go
 *.test
 *.prof
 
+.glide
 glide.lock
 coverage.out
 coverage-all.out
 server
-vendor
+
+# vendor
