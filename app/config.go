@@ -25,12 +25,12 @@ type appConfig struct {
 	JWTVerificationKey string `mapstructure:"jwt_verification_key"`
 }
 
-func (config *appConfig) Validate() error {
-	return validation.StructRules{}.
-		Add("DSN", validation.Required).
-		Add("JWTSigningKey", validation.Required).
-		Add("JWTVerificationKey", validation.Required).
-		Validate(config)
+func (config appConfig) Validate() error {
+	return validation.ValidateStruct(&config,
+		validation.Field(&config.DSN, validation.Required),
+		validation.Field(&config.JWTSigningKey, validation.Required),
+		validation.Field(&config.JWTVerificationKey, validation.Required),
+	)
 }
 
 // LoadConfig loads configuration from the given list of paths and populates it into the Config variable.
