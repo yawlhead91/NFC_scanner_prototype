@@ -46,7 +46,6 @@ func TestArtistDAO(t *testing.T) {
 				Name: "tester",
 			}
 			err := dao.Update(rs, artist.Id, artist)
-			assert.Nil(t, rs.Tx().Commit())
 			assert.Nil(t, err)
 		})
 	}
@@ -59,7 +58,6 @@ func TestArtistDAO(t *testing.T) {
 				Name: "tester",
 			}
 			err := dao.Update(rs, 99999, artist)
-			assert.Nil(t, rs.Tx().Commit())
 			assert.NotNil(t, err)
 		})
 	}
@@ -68,7 +66,6 @@ func TestArtistDAO(t *testing.T) {
 		// Delete
 		testDBCall(db, func(rs app.RequestScope) {
 			err := dao.Delete(rs, 2)
-			assert.Nil(t, rs.Tx().Commit())
 			assert.Nil(t, err)
 		})
 	}
@@ -77,7 +74,6 @@ func TestArtistDAO(t *testing.T) {
 		// Delete with error
 		testDBCall(db, func(rs app.RequestScope) {
 			err := dao.Delete(rs, 99999)
-			assert.Nil(t, rs.Tx().Commit())
 			assert.NotNil(t, err)
 		})
 	}
@@ -86,7 +82,6 @@ func TestArtistDAO(t *testing.T) {
 		// Query
 		testDBCall(db, func(rs app.RequestScope) {
 			artists, err := dao.Query(rs, 1, 3)
-			assert.Nil(t, rs.Tx().Commit())
 			assert.Nil(t, err)
 			assert.Equal(t, 3, len(artists))
 		})
@@ -96,7 +91,6 @@ func TestArtistDAO(t *testing.T) {
 		// Count
 		testDBCall(db, func(rs app.RequestScope) {
 			count, err := dao.Count(rs)
-			assert.Nil(t, rs.Tx().Commit())
 			assert.Nil(t, err)
 			assert.NotZero(t, count)
 		})
