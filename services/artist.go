@@ -7,17 +7,17 @@ import (
 
 // artistDAO specifies the interface of the artist DAO needed by ArtistService.
 type artistDAO interface {
-	// Get returns the artist with the specified the artist ID.
+	// Get returns the artist with the specified artist ID.
 	Get(rs app.RequestScope, id int) (*models.Artist, error)
 	// Count returns the number of artists.
 	Count(rs app.RequestScope) (int, error)
-	// Query returns the list of the artists with the given offset and limit.
+	// Query returns the list of artists with the given offset and limit.
 	Query(rs app.RequestScope, offset, limit int) ([]models.Artist, error)
 	// Create saves a new artist in the storage.
 	Create(rs app.RequestScope, artist *models.Artist) error
-	// Update updates the artist with the given ID in the storage.
+	// Update updates the artist with given ID in the storage.
 	Update(rs app.RequestScope, id int, artist *models.Artist) error
-	// Delete removes the artist with the given ID from the storage.
+	// Delete removes the artist with given ID from the storage.
 	Delete(rs app.RequestScope, id int) error
 }
 
