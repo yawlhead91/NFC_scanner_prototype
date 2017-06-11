@@ -23,22 +23,22 @@ type apiTestCase struct {
 	response string
 }
 
-var router *routing.Router
-
-func init() {
+func newRouter() *routing.Router {
 	logger := logrus.New()
 	logger.Level = logrus.PanicLevel
 
-	router = routing.New()
+	router := routing.New()
 
 	router.Use(
 		app.Init(logger),
 		content.TypeNegotiator(content.JSON),
 		app.Transactional(testdata.DB),
 	)
+
+	return router
 }
 
-func testAPI(method, URL, body string) *httptest.ResponseRecorder {
+func testAPI(router *routing.Router, method, URL, body string) *httptest.ResponseRecorder {
 	req, _ := http.NewRequest(method, URL, bytes.NewBufferString(body))
 	req.Header.Set("Content-Type", "application/json")
 	res := httptest.NewRecorder()
@@ -46,9 +46,9 @@ func testAPI(method, URL, body string) *httptest.ResponseRecorder {
 	return res
 }
 
-func runAPITests(t *testing.T, tests []apiTestCase) {
+func runAPITests(t *testing.T, router *routing.Router, tests []apiTestCase) {
 	for _, test := range tests {
-		res := testAPI(test.method, test.url, test.body)
+		res := testAPI(router, test.method, test.url, test.body)
 		assert.Equal(t, test.status, res.Code, test.tag)
 		if test.response != "" {
 			assert.JSONEq(t, test.response, res.Body.String(), test.tag)
