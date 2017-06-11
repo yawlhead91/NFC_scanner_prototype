@@ -8,3 +8,6 @@ dsn: "postgres://postgres:postgres@127.0.0.1:5432/go_restful?sslmode=disable"
 #   RESTFUL_JWT_SIGNING_KEY
 jwt_verification_key: "QfCAH04Cob7b71QCqy738vw5XGSnFZ9d"
 jwt_signing_key: "QfCAH04Cob7b71QCqy738vw5XGSnFZ9d"
+# Uncomment the following line and set an appropriate JWT signing method, if needed
+# The default signing method is HS256.
+#jwt_signing_method: "HS256"

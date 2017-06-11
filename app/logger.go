@@ -4,6 +4,9 @@ import "github.com/Sirupsen/logrus"
 
 // Logger defines the logger interface that is exposed via RequestScope.
 type Logger interface {
+	// adds a field that should be added to every message being logged
+	SetField(name, value string)
+
 	Debugf(format string, args ...interface{})
 	Infof(format string, args ...interface{})
 	Warnf(format string, args ...interface{})
@@ -26,6 +29,10 @@ func NewLogger(l *logrus.Logger, fields logrus.Fields) Logger {
 		logger: l,
 		fields: fields,
 	}
+}
+
+func (l *logger) SetField(name, value string) {
+	l.fields[name] = value
 }
 
 func (l *logger) Debugf(format string, args ...interface{}) {

@@ -49,7 +49,7 @@ go get -u github.com/Masterminds/glide
 
 # fetch the dependent packages
 cd $GOPATH/qiangxue/golang-restful-starter-kit
-glide up -u -s
+make depends   # or "glide up"
 ```
 
 Next, create a PostgreSQL database named `go_restful` and execute the SQL statements given in the file `testdata/db.sql`.

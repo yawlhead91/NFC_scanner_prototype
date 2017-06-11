@@ -33,6 +33,13 @@ func (rs *requestScope) UserID() string {
 	return "tester"
 }
 
+func (rs *requestScope) SetUserID(id string) {
+}
+
+func (rs *requestScope) RequestID() string {
+	return "test"
+}
+
 func (rs *requestScope) Tx() *dbx.Tx {
 	return rs.tx
 }

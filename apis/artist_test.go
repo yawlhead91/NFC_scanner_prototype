@@ -15,7 +15,7 @@ func TestArtist(t *testing.T) {
 	ServeArtistResource(&router.RouteGroup, services.NewArtistService(daos.NewArtistDAO()))
 
 	notFoundError := `{"error_code":"NOT_FOUND", "message":"NOT_FOUND"}`
-	nameRequiredError := `{"error_code":"INVALID_DATA","message":"INVALID_DATA","details":[{"field":"Name","error":"cannot be blank"}]}`
+	nameRequiredError := `{"error_code":"INVALID_DATA","message":"INVALID_DATA","details":[{"field":"name","error":"cannot be blank"}]}`
 
 	runAPITests(t, router, []apiTestCase{
 		{"t1 - get an artist", "GET", "/artists/2", "", http.StatusOK, `{"id":2,"name":"Accept"}`},
