@@ -29,7 +29,7 @@ since their usages are mostly localized and abstracted.
 * Data validation: [ozzo-validation](https://github.com/go-ozzo/ozzo-validation)
 * Logging: [logrus](https://github.com/Sirupsen/logrus)
 * Configuration: [viper](https://github.com/spf13/viper)
-* Dependency management: [glide](https://github.com/Masterminds/glide)
+* Dependency management: [dep](https://github.com/golang/dep)
 * Testing: [testify](https://github.com/stretchr/testify)
 
 
@@ -44,12 +44,12 @@ After installing Go, run the following commands to download and install this sta
 # install the starter kit
 go get github.com/qiangxue/golang-restful-starter-kit
 
-# install glide (a vendoring and dependency management tool), if you don't have it yet
-go get -u github.com/Masterminds/glide
+# install dep
+$ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 # fetch the dependent packages
 cd $GOPATH/qiangxue/golang-restful-starter-kit
-make depends   # or "glide up"
+dep ensure
 ```
 
 Next, create a PostgreSQL database named `go_restful` and execute the SQL statements given in the file `testdata/db.sql`.

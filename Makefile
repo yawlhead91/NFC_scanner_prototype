@@ -6,7 +6,7 @@ LDFLAGS:=-ldflags "-X github.com/qiangxue/golang-restful-starter-kit/app.Version
 default: run
 
 depends:
-	../../../../bin/glide up
+	dep ensure
 
 test:
 	echo "mode: count" > coverage-all.out
