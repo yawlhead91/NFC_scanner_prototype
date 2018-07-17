@@ -1,8 +1,8 @@
 language: go
 
 go:
-  - 1.6
-  - 1.7
+  - '1.9'
+  - '1.10'
   - tip
 
 cache:
@@ -16,8 +16,8 @@ install:
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/mattn/goveralls
   - go get github.com/axw/gocov/gocov
-  - go get -u github.com/Masterminds/glide
-  - glide up -s -u
+  - go get -u github.com/golang/dep/cmd/dep
+  - dep ensure
 
 before_script:
   - psql -U postgres -c 'CREATE DATABASE go_restful;';
