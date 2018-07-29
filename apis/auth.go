@@ -6,9 +6,9 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/auth"
-	"github.com/yawlhead91/GalNFCPrototype/app"
-	"github.com/yawlhead91/GalNFCPrototype/errors"
-	"github.com/yawlhead91/GalNFCPrototype/models"
+	"github.com/yawlhead91/NFC_scanner_prototype/app"
+	"github.com/yawlhead91/NFC_scanner_prototype/errors"
+	"github.com/yawlhead91/NFC_scanner_prototype/models"
 )
 
 type Credential struct {

@@ -11,11 +11,11 @@ import (
 	"github.com/go-ozzo/ozzo-routing/content"
 	"github.com/go-ozzo/ozzo-routing/cors"
 	_ "github.com/lib/pq"
-	"github.com/yawlhead91/GalNFCPrototype/apis"
-	"github.com/yawlhead91/GalNFCPrototype/app"
-	"github.com/yawlhead91/GalNFCPrototype/daos"
-	"github.com/yawlhead91/GalNFCPrototype/errors"
-	"github.com/yawlhead91/GalNFCPrototype/services"
+	"github.com/yawlhead91/NFC_scanner_prototype/apis"
+	"github.com/yawlhead91/NFC_scanner_prototype/app"
+	"github.com/yawlhead91/NFC_scanner_prototype/daos"
+	"github.com/yawlhead91/NFC_scanner_prototype/errors"
+	"github.com/yawlhead91/NFC_scanner_prototype/services"
 )
 
 func main() {

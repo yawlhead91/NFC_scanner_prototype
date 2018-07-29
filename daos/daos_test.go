@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/go-ozzo/ozzo-dbx"
-	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/NFC_scanner_prototype/app"
 )
 
 func testDBCall(db *dbx.DB, f func(rs app.RequestScope)) {

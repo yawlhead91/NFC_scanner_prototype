@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/yawlhead91/GalNFCPrototype/app"
-	"github.com/yawlhead91/GalNFCPrototype/models"
+	"github.com/yawlhead91/NFC_scanner_prototype/app"
+	"github.com/yawlhead91/NFC_scanner_prototype/models"
 )
 
 func TestNewArtistService(t *testing.T) {

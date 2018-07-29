@@ -1,7 +1,7 @@
 MAIN_VERSION:=$(shell git describe --abbrev=0 --tags || echo "0.1")
 VERSION:=${MAIN_VERSION}\#$(shell git log -n 1 --pretty=format:"%h")
 PACKAGES:=$(shell go list ./... | sed -n '1!p' | grep -v /vendor/)
-LDFLAGS:=-ldflags "-X github.com/yawlhead91/GalNFCPrototype/app.Version=${VERSION}"
+LDFLAGS:=-ldflags "-X github.com/yawlhead91/NFC_scanner_prototype/app.Version=${VERSION}"
 
 default: run
 

@@ -4,8 +4,8 @@ import (
 	"strconv"
 
 	"github.com/go-ozzo/ozzo-routing"
-	"github.com/yawlhead91/GalNFCPrototype/app"
-	"github.com/yawlhead91/GalNFCPrototype/models"
+	"github.com/yawlhead91/NFC_scanner_prototype/app"
+	"github.com/yawlhead91/NFC_scanner_prototype/models"
 )
 
 type (

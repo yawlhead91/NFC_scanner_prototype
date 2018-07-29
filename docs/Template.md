@@ -1,9 +1,9 @@
 # Go RESTful Application Starter Kit
 
-[![GoDoc](https://godoc.org/github.com/yawlhead91/GalNFCPrototype?status.png)](http://godoc.org/github.com/yawlhead91/GalNFCPrototype)
+[![GoDoc](https://godoc.org/github.com/yawlhead91/NFC_scanner_prototype?status.png)](http://godoc.org/github.com/yawlhead91/NFC_scanner_prototype)
 [![Build Status](https://travis-ci.org/qiangxue/golang-restful-starter-kit.svg?branch=master)](https://travis-ci.org/qiangxue/golang-restful-starter-kit)
 [![Coverage Status](https://coveralls.io/repos/github/qiangxue/golang-restful-starter-kit/badge.svg?branch=master)](https://coveralls.io/github/qiangxue/golang-restful-starter-kit?branch=master)
-[![Go Report](https://goreportcard.com/badge/github.com/yawlhead91/GalNFCPrototype)](https://goreportcard.com/report/github.com/yawlhead91/GalNFCPrototype)
+[![Go Report](https://goreportcard.com/badge/github.com/yawlhead91/NFC_scanner_prototype)](https://goreportcard.com/report/github.com/yawlhead91/NFC_scanner_prototype)
 
 This starter kit is designed to get you up and running with a project structure optimal for developing
 RESTful services in Go. The kit promotes the best practices that follow the [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
@@ -42,7 +42,7 @@ After installing Go, run the following commands to download and install this sta
 
 ```shell
 # install the starter kit
-go get github.com/yawlhead91/GalNFCPrototype
+go get github.com/yawlhead91/NFC_scanner_prototype
 
 # install dep
 $ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
@@ -118,8 +118,8 @@ the project structure and the recommended practices.
 To use the starter kit as a starting point of a real project whose package name is something like
 `github.com/abc/xyz`, take the following steps:
  
-* move the directory `$GOPATH/github.com/yawlhead91/GalNFCPrototype` to `$GOPATH/github.com/abc/xyz`
-* do a global replacement of the string `github.com/yawlhead91/GalNFCPrototype` in all of
+* move the directory `$GOPATH/github.com/yawlhead91/NFC_scanner_prototype` to `$GOPATH/github.com/abc/xyz`
+* do a global replacement of the string `github.com/yawlhead91/NFC_scanner_prototype` in all of
   project files with the string `github.com/abc/xyz`
 
 ### Implementing CRUD of Another Table
