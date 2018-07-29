@@ -52,12 +52,12 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
 	router := routing.New()
 
 	router.To("GET,HEAD", "/ping", func(c *routing.Context) error {
-		c.Abort()  // skip all other middlewares/handlers
+		c.Abort() // skip all other middlewares/handlers
 		return c.Write("OK " + app.Version)
 	})
 
 	router.Use(
-		app.Init(logger),``
+		app.Init(logger),
 		content.TypeNegotiator(content.JSON),
 		cors.Handler(cors.Options{
 			AllowOrigins: "*",
