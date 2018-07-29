@@ -3,10 +3,10 @@ package daos
 import (
 	"testing"
 
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/models"
-	"github.com/qiangxue/golang-restful-starter-kit/testdata"
 	"github.com/stretchr/testify/assert"
+	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/GalNFCPrototype/models"
+	"github.com/yawlhead91/GalNFCPrototype/testdata"
 )
 
 func TestArtistDAO(t *testing.T) {

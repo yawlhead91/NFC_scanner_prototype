@@ -9,9 +9,9 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/content"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/testdata"
 	"github.com/stretchr/testify/assert"
+	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/GalNFCPrototype/testdata"
 )
 
 type apiTestCase struct {

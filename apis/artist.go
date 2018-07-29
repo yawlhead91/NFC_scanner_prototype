@@ -4,8 +4,8 @@ import (
 	"strconv"
 
 	"github.com/go-ozzo/ozzo-routing"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/models"
+	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/GalNFCPrototype/models"
 )
 
 type (

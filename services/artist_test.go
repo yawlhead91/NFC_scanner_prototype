@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/models"
 	"github.com/stretchr/testify/assert"
+	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/GalNFCPrototype/models"
 )
 
 func TestNewArtistService(t *testing.T) {

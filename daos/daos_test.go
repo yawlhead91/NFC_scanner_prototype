@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/go-ozzo/ozzo-dbx"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
+	"github.com/yawlhead91/GalNFCPrototype/app"
 )
 
 func testDBCall(db *dbx.DB, f func(rs app.RequestScope)) {

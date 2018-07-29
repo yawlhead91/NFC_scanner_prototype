@@ -11,7 +11,7 @@ import (
 	"github.com/go-ozzo/ozzo-routing/access"
 	"github.com/go-ozzo/ozzo-routing/fault"
 	"github.com/go-ozzo/ozzo-validation"
-	"github.com/qiangxue/golang-restful-starter-kit/errors"
+	"github.com/yawlhead91/GalNFCPrototype/errors"
 )
 
 // Init returns a middleware that prepares the request context and processing environment.

@@ -47,7 +47,7 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/qiangxue/golang-restful-starter-kit"
+  name = "github.com/yawlhead91/GalNFCPrototype"
 
 [[constraint]]
   name = "github.com/spf13/viper"

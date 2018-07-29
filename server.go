@@ -11,11 +11,11 @@ import (
 	"github.com/go-ozzo/ozzo-routing/content"
 	"github.com/go-ozzo/ozzo-routing/cors"
 	_ "github.com/lib/pq"
-	"github.com/qiangxue/golang-restful-starter-kit/apis"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/daos"
-	"github.com/qiangxue/golang-restful-starter-kit/errors"
-	"github.com/qiangxue/golang-restful-starter-kit/services"
+	"github.com/yawlhead91/GalNFCPrototype/apis"
+	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/GalNFCPrototype/daos"
+	"github.com/yawlhead91/GalNFCPrototype/errors"
+	"github.com/yawlhead91/GalNFCPrototype/services"
 )
 
 func main() {
@@ -57,7 +57,7 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
 	})
 
 	router.Use(
-		app.Init(logger),
+		app.Init(logger),``
 		content.TypeNegotiator(content.JSON),
 		cors.Handler(cors.Options{
 			AllowOrigins: "*",

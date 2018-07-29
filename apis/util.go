@@ -4,7 +4,7 @@ import (
 	"strconv"
 
 	"github.com/go-ozzo/ozzo-routing"
-	"github.com/qiangxue/golang-restful-starter-kit/util"
+	"github.com/yawlhead91/GalNFCPrototype/util"
 )
 
 const (

@@ -1,8 +1,8 @@
 package daos
 
 import (
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/models"
+	"github.com/yawlhead91/GalNFCPrototype/app"
+	"github.com/yawlhead91/GalNFCPrototype/models"
 )
 
 // ArtistDAO persists artist data in database
