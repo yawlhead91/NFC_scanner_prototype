@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/go-ozzo/ozzo-routing/badge.svg?branch=master)](https://coveralls.io/github/go-ozzo/ozzo-routing?branch=master)
 [![Go Report](https://goreportcard.com/badge/github.com/go-ozzo/ozzo-routing)](https://goreportcard.com/report/github.com/go-ozzo/ozzo-routing)
 
-**You may consider using [golang-restful-starter-kit](https://github.com/yawlhead91/NFC_scanner_prototype) to jumpstart your new RESTful applications with ozzo-routing.**
+**You may consider using [golang-restful-starter-kit](https://github.com/yawlhead91/nfc_scanner_prototype) to jumpstart your new RESTful applications with ozzo-routing.**
 
 ## Description
 
@@ -43,7 +43,7 @@ go get gopkg.in/go-ozzo/ozzo-routing.v1
 
 ## Getting Started
 
-For a complete RESTful application boilerplate based on ozzo-routing, please refer to the [golang-restful-starter-kit](https://github.com/yawlhead91/NFC_scanner_prototype). Below we describe how to create a simple REST API using ozzo-routing.
+For a complete RESTful application boilerplate based on ozzo-routing, please refer to the [golang-restful-starter-kit](https://github.com/yawlhead91/nfc_scanner_prototype). Below we describe how to create a simple REST API using ozzo-routing.
 
 Create a `server.go` file with the following content:
 

@@ -1,11 +1,16 @@
-FROM alpine:3.6
+FROM golang:latest as builder
+COPY . /go/src/github.com/yawlhead91/nfc_scanner_prototype/
+WORKDIR /go/src/github.com/yawlhead91/nfc_scanner_prototype/
 
-EXPOSE 3000
-WORKDIR /go/src/github.com/yawlhead91/NFC_scanner_prototype
-VOLUME  /go/src/github.com/yawlhead91/NFC_scanner_prototype
 
-RUN apk add --update ca-certificates tzdata
+RUN go get github.com/canthefason/go-watcher && go install github.com/canthefason/go-watcher/cmd/watcher
+RUN pwd
+RUN go build -a -installsuffix cgo main.go
+RUN pwd
+RUN watcher -run github.com/yawlhead91/nfc_scanner_prototype/ -watch github.com/yawlhead91/nfc_scanner_prototype
 
-COPY ./server ./server
-
-CMD ./server
+# FROM alpine:latest  
+# RUN apk --no-cache add ca-certificates
+# WORKDIR /root/
+# COPY --from=0 /go/src/github.com/yawlhead91/nfc_scanner_prototype .
+# CMD ["./main"]  

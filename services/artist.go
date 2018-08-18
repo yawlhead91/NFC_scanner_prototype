@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/yawlhead91/NFC_scanner_prototype/app"
-	"github.com/yawlhead91/NFC_scanner_prototype/models"
+	"github.com/yawlhead91/nfc_scanner_prototype/app"
+	"github.com/yawlhead91/nfc_scanner_prototype/models"
 )
 
 // artistDAO specifies the interface of the artist DAO needed by ArtistService.

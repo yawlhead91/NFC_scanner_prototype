@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/yawlhead91/NFC_scanner_prototype/daos"
-	"github.com/yawlhead91/NFC_scanner_prototype/services"
-	"github.com/yawlhead91/NFC_scanner_prototype/testdata"
+	"github.com/yawlhead91/nfc_scanner_prototype/daos"
+	"github.com/yawlhead91/nfc_scanner_prototype/services"
+	"github.com/yawlhead91/nfc_scanner_prototype/testdata"
 )
 
 func TestArtist(t *testing.T) {

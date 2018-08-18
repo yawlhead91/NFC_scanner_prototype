@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/Sirupsen/logrus"
@@ -11,14 +12,15 @@ import (
 	"github.com/go-ozzo/ozzo-routing/content"
 	"github.com/go-ozzo/ozzo-routing/cors"
 	_ "github.com/lib/pq"
-	"github.com/yawlhead91/NFC_scanner_prototype/apis"
-	"github.com/yawlhead91/NFC_scanner_prototype/app"
-	"github.com/yawlhead91/NFC_scanner_prototype/daos"
-	"github.com/yawlhead91/NFC_scanner_prototype/errors"
-	"github.com/yawlhead91/NFC_scanner_prototype/services"
+	"github.com/yawlhead91/nfc_scanner_prototype/apis"
+	"github.com/yawlhead91/nfc_scanner_prototype/app"
+	"github.com/yawlhead91/nfc_scanner_prototype/daos"
+	"github.com/yawlhead91/nfc_scanner_prototype/errors"
+	"github.com/yawlhead91/nfc_scanner_prototype/services"
 )
 
 func main() {
+	log.Print("Starting")
 	// load application configurations
 	if err := app.LoadConfig("./config"); err != nil {
 		panic(fmt.Errorf("Invalid application configuration: %s", err))
@@ -44,6 +46,7 @@ func main() {
 
 	// start the server
 	address := fmt.Sprintf(":%v", app.Config.ServerPort)
+	log.Print(address)
 	logger.Infof("server %v is started at %v\n", app.Version, address)
 	panic(http.ListenAndServe(address, nil))
 }

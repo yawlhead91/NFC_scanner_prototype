@@ -10,8 +10,8 @@ import (
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/content"
 	"github.com/stretchr/testify/assert"
-	"github.com/yawlhead91/NFC_scanner_prototype/app"
-	"github.com/yawlhead91/NFC_scanner_prototype/testdata"
+	"github.com/yawlhead91/nfc_scanner_prototype/app"
+	"github.com/yawlhead91/nfc_scanner_prototype/testdata"
 )
 
 type apiTestCase struct {

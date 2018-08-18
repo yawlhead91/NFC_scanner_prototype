@@ -4,7 +4,7 @@ import (
 	"strconv"
 
 	"github.com/go-ozzo/ozzo-routing"
-	"github.com/yawlhead91/NFC_scanner_prototype/util"
+	"github.com/yawlhead91/nfc_scanner_prototype/util"
 )
 
 const (

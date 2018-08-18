@@ -47,7 +47,7 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/yawlhead91/NFC_scanner_prototype"
+  name = "github.com/yawlhead91/nfc_scanner_prototype"
 
 [[constraint]]
   name = "github.com/spf13/viper"

@@ -1,8 +1,8 @@
 package daos
 
 import (
-	"github.com/yawlhead91/NFC_scanner_prototype/app"
-	"github.com/yawlhead91/NFC_scanner_prototype/models"
+	"github.com/yawlhead91/nfc_scanner_prototype/app"
+	"github.com/yawlhead91/nfc_scanner_prototype/models"
 )
 
 // ArtistDAO persists artist data in database

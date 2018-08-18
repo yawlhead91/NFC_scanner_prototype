@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/yawlhead91/NFC_scanner_prototype/app"
-	"github.com/yawlhead91/NFC_scanner_prototype/models"
-	"github.com/yawlhead91/NFC_scanner_prototype/testdata"
+	"github.com/yawlhead91/nfc_scanner_prototype/app"
+	"github.com/yawlhead91/nfc_scanner_prototype/models"
+	"github.com/yawlhead91/nfc_scanner_prototype/testdata"
 )
 
 func TestArtistDAO(t *testing.T) {
